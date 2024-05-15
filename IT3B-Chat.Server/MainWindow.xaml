@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IT3B_Chat.Server"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="CHATROOM" Height="470" Width="800" ResizeMode="CanMinimize" >
+    <Grid Background="#616161">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="ChatRoomLabel" Content="AKTUÁLNÍ CHATROOM:" HorizontalAlignment="Left" Height="42" Margin="12,10,0,0" VerticalAlignment="Top" Width="256" FontWeight="Bold" FontSize="22" Background="Gray" Grid.Column="1"/>
+        <TextBlock x:Name="ChatRoomNumberDisplay" HorizontalAlignment="Left" Margin="268,10,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="42" Width="114" FontSize="22" Grid.Column="1" Background="#BBBBBA"/>
+        <Label x:Name="NameLabel" Grid.Column="1" Content="JMÉNO:" HorizontalAlignment="Left" Margin="390,10,0,0" VerticalAlignment="Top" Height="42" Width="104" FontWeight="Bold" FontSize="22" Background="Gray"/>
+        <TextBox x:Name="NameInput" Grid.Column="1" HorizontalAlignment="Left" Height="42" Margin="494,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="167"/>
+        <Button x:Name="NameSetButton" Grid.Column="1" Content="NASTAVIT" HorizontalAlignment="Left" Margin="661,10,0,0" VerticalAlignment="Top" Height="42" Width="109" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="ActivityLabel" Content="AKTIVITA UŽIVATELŮ:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="41" Margin="530,68,0,0" VerticalAlignment="Top" Width="240" FontSize="22" FontWeight="Bold" Background="Gray"/>
+        <Label x:Name="MessagesLabel" Content="ZPRÁVY:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="41" Margin="10,68,0,0" VerticalAlignment="Top" Width="515" FontSize="22" FontWeight="Bold" Background="Gray"/>
+        <TextBlock x:Name="MessageDisplay" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="255" Margin="10,114,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="515" Background="#D8D7D5" FontSize="16"/>
+        <TextBlock x:Name="ActivityDisplay" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="310" Margin="530,114,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="240" Background="#D8D7D5" FontSize="16"/>
+        <TextBox x:Name="MessageInput" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="50" Margin="10,374,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="459"/>
+        <Button x:Name="MessageSendButton" Content="🚀" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="50" Margin="474,374,0,0" VerticalAlignment="Top" Width="51" FontSize="30" FontWeight="Normal"/>
 
     </Grid>
 </Window>
